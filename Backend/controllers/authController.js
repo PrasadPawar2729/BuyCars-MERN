@@ -46,7 +46,7 @@ const loginUser = async (req, res) => {
         // console.log(user.email)
 
         const isMatch = await bcrypt.compare(password, user.password);
-        console.log(isMatch);
+        // console.log(isMatch);
         if (!isMatch) {
             return res.status(401).json({ error: 'Invalid credentials sss' });
         }
